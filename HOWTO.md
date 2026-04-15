@@ -1,4 +1,4 @@
-##### HOWTO.md
+#### HOWTO.md
 
 ##### AegisIntel — Simple Git Workflow Guide
 
