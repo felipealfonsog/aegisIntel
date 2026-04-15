@@ -1,37 +1,28 @@
 # HOWTO.md
 
-# AegisIntel — Quick Git Workflow Guide
+# AegisIntel — Git Workflow Guide
 
-This document explains the basic Git workflow for collaborators working on AegisIntel.
+This document explains how to work with Git in this project.
 
-Its purpose is to keep the project clean, avoid mistakes, and make collaboration easier.
-
----
-
-## Branches used in this project
-
-The repository uses the following branch structure:
-
-- main → stable branch
-- dev → integration branch
-- feature/* → work branches for specific tasks
-
-Examples:
-
-- feature/ioc-validation
-- feature/enrichment-engine
-- feature/cli-initial
-- feature/api-initial
+The workflow is intentionally simple but structured enough to avoid mistakes.
 
 ---
 
-## General rule
+## Branches used
 
-Do not work directly on main.
+We use only two branches:
 
-Do not commit random changes to dev unless explicitly agreed.
+- main → stable version (production-ready)
+- dev → development branch (active work)
 
-All work should be done in a dedicated feature/* branch.
+---
+
+## Core principles
+
+- Never work directly on main
+- All changes go through dev
+- main only receives stable code via Pull Request
+- Keep commits clean and meaningful
 
 ---
 
@@ -42,79 +33,66 @@ Clone the repository:
 git clone https://github.com/felipealfonsog/aegisIntel.git
 cd aegisIntel
 
-Switch to the development branch:
+Switch to dev:
 
 git checkout dev
 git pull origin dev
 
 ---
 
-## Basic daily workflow
+## Daily workflow
 
-### 1. Move to dev
-
-Before starting new work:
+### 1. Always update before working
 
 git checkout dev
 git pull origin dev
 
 ---
 
-### 2. Create or switch to your feature branch
+### 2. Make your changes
 
-If the branch already exists:
+Edit files normally.
 
-git checkout feature/ioc-validation
-git pull origin feature/ioc-validation
-
-If creating a new branch:
-
-git checkout dev
-git pull origin dev
-git checkout -b feature/my-new-feature
-git push -u origin feature/my-new-feature
-
----
-
-### 3. Work on your changes
-
-Check changes:
+Check current state:
 
 git status
 
 ---
 
-### 4. Add and commit
+### 3. Add changes
 
 git add .
 
+---
+
+### 4. Commit
+
 git commit -m "Clear and specific message"
 
-Examples:
+Good examples:
 
-- Add domain validation tests
+- Add root API endpoint
+- Improve IOC validation logic
 - Refactor enrichment engine
-- Add API health endpoint
+- Fix CLI JSON output formatting
 
-Avoid:
+Bad examples:
 
-- fix stuff
-- changes
 - update
+- changes
+- fix stuff
 
 ---
 
-### 5. Push changes
+### 5. Push
 
 git push
 
-First time:
-
-git push -u origin feature/ioc-validation
-
 ---
 
-## Creating a Pull Request
+## Pull Request process (dev → main)
+
+When dev is stable:
 
 1. Go to GitHub
 2. Open repository
@@ -122,28 +100,24 @@ git push -u origin feature/ioc-validation
 4. Click New Pull Request
 5. Set:
 
-base = dev  
-compare = your feature branch  
+base = main  
+compare = dev  
 
-6. Add title and description  
-7. Create Pull Request  
+6. Add a clear title and description
+7. Create Pull Request
+8. Merge
 
 ---
 
-## After merge
+## After merging
 
-Update your local repo:
+Update your local repository:
+
+git checkout main
+git pull origin main
 
 git checkout dev
 git pull origin dev
-
-Delete local branch (optional):
-
-git branch -d feature/ioc-validation
-
-Delete remote branch (optional):
-
-git push origin --delete feature/ioc-validation
 
 ---
 
@@ -161,64 +135,34 @@ git status
 
 ---
 
-See remote branches:
-
-git branch -r
-
----
-
-Fetch updates:
-
-git fetch origin
-
----
-
-Pull updates:
+Pull latest changes:
 
 git pull
 
 ---
 
+Fetch updates without merging:
+
+git fetch origin
+
+---
+
 ## Safe workflow summary
 
-1. update dev  
-2. create or switch to feature branch  
-3. work  
-4. git add .  
-5. git commit  
-6. git push  
-7. open PR to dev  
+1. work only on dev  
+2. always pull before starting  
+3. commit clearly  
+4. push regularly  
+5. merge dev into main when stable  
 
 ---
 
 ## Important rules
 
-Never work directly on main.
-
-Always start from dev.
-
-Always pull before working.
-
-Commit clearly.
-
-Check git status often.
-
----
-
-## Example workflow
-
-git checkout dev
-git pull origin dev
-git checkout -b feature/example-task
-git push -u origin feature/example-task
-
-git add .
-git commit -m "Add example feature"
-git push
-
-Then create PR:
-
-feature/example-task → dev
+- main must always stay clean and stable
+- dev is the only working branch
+- no feature branches for now (keep it simple)
+- avoid large unstructured commits
 
 ---
 
@@ -228,16 +172,21 @@ Run:
 
 git status
 
-Check current branch and state before doing anything else.
+This command will tell you:
+
+- which branch you are on
+- what changed
+- what is staged or not
+
+Do not run random commands without understanding the state.
 
 ---
 
 ## Final note
 
-This project uses a simple professional workflow:
+This project follows a minimal and practical workflow:
 
-- main = stable
-- dev = integration
-- feature/* = development
+main = stable  
+dev = development  
 
-Follow this and everything stays clean and predictable.
+Simplicity is intentional. Complexity will be added only when needed.
