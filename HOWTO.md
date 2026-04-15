@@ -1,32 +1,31 @@
-HOWTO.md
+##### HOWTO.md
 
-AegisIntel — Git Workflow Guide
+##### AegisIntel — Simple Git Workflow Guide
 
 This document explains how to work with Git in this project.
 
-The workflow is intentionally simple but structured enough to avoid mistakes.
+This workflow is intentionally simple.
 
 ---
 
-Branches used
+##### Branches used
 
-We use only two branches:
+We only use:
 
-- main → stable version (production-ready)
-- dev → development branch (active work)
+- main → stable version
+- dev → development branch
 
 ---
 
-Core principles
+##### General rules
 
 - Never work directly on main
-- All changes go through dev
+- All work is done in dev
 - main only receives stable code via Pull Request
-- Keep commits clean and meaningful
 
 ---
 
-First-time setup
+##### First-time setup
 
 Clone the repository:
 
@@ -40,43 +39,45 @@ git pull origin dev
 
 ---
 
-Daily workflow
+##### Daily workflow
 
-1. Always update before working
+##### 1. Update dev
+
+Before starting:
 
 git checkout dev
 git pull origin dev
 
 ---
 
-2. Make your changes
+##### 2. Work on the project
 
 Edit files normally.
 
-Check current state:
+Check status:
 
 git status
 
 ---
 
-3. Add changes
+##### 3. Add changes
 
 git add .
 
 ---
 
-4. Commit
+##### 4. Commit
 
-git commit -m "Clear and specific message"
+git commit -m "Clear message describing changes"
 
-Good examples:
+Examples:
 
 - Add root API endpoint
-- Improve IOC validation logic
-- Refactor enrichment engine
-- Fix CLI JSON output formatting
+- Improve IOC validation
+- Refactor enrichment logic
+- Fix CLI output formatting
 
-Bad examples:
+Avoid:
 
 - update
 - changes
@@ -84,13 +85,13 @@ Bad examples:
 
 ---
 
-5. Push
+##### 5. Push changes
 
 git push
 
 ---
 
-Pull Request process (dev → main)
+##### Creating a Pull Request (dev → main)
 
 When dev is stable:
 
@@ -103,15 +104,14 @@ When dev is stable:
 base = main  
 compare = dev  
 
-6. Add a clear title and description
-7. Create Pull Request
-8. Merge
+6. Create Pull Request
+7. Merge
 
 ---
 
-After merging
+##### After merge
 
-Update your local repository:
+Update local repo:
 
 git checkout main
 git pull origin main
@@ -121,7 +121,7 @@ git pull origin dev
 
 ---
 
-Useful commands
+##### Useful commands
 
 Check current branch:
 
@@ -141,52 +141,40 @@ git pull
 
 ---
 
-Fetch updates without merging:
-
-git fetch origin
-
----
-
-Safe workflow summary
+##### Safe workflow summary
 
 1. work only on dev  
-2. always pull before starting  
+2. pull before starting  
 3. commit clearly  
 4. push regularly  
 5. merge dev into main when stable  
 
 ---
 
-Important rules
+##### Important notes
 
 - main must always stay clean and stable
-- dev is the only working branch
+- dev is where all development happens
 - no feature branches for now (keep it simple)
-- avoid large unstructured commits
+- if the project grows, the workflow can evolve later
 
 ---
 
-If something goes wrong
+##### If something goes wrong
 
 Run:
 
 git status
 
-This command will tell you:
-
-- which branch you are on
-- what changed
-- what is staged or not
-
-Do not run random commands without understanding the state.
+Check current branch and changes before doing anything else.
 
 ---
 
-Final note
+##### Final note
 
-This project follows a minimal and practical workflow:
+This project uses a minimal workflow:
 
 main = stable  
 dev = development  
 
-Simplicity is intentional. Complexity will be added only when needed.
+Keep it simple, consistent, and predictable.
