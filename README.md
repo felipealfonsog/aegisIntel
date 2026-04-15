@@ -15,6 +15,38 @@ AegisIntel es una plataforma de ciberinteligencia orientada a la defensa, diseñ
 El sistema permite transformar datos dispersos en inteligencia estructurada, facilitando la identificación de patrones, priorización de amenazas y generación de insights accionables para entornos de seguridad.
 
 AegisIntel está pensado como un núcleo modular extensible, integrando pipelines de ingestión, motores de enriquecimiento, y capacidades de correlación, con el objetivo de simular y aproximarse a sistemas utilizados en operaciones reales de Threat Intelligence y Security Operations Centers (SOC).
+
+#
+RUN THE PROJECT
+
+Cómo ejecutar el proyecto
+Crear entorno e instalar
+
+```
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+Probar CLI
+```
+python -m aegisintel.cli.main ioc enrich 8.8.8.8
+```
+Probar API
+```
+uvicorn aegisintel.api.main:app --reload
+```
+
+
+Luego:
+```
+	•	http://127.0.0.1:8000/health
+	•	http://127.0.0.1:8000/ioc/enrich?value=8.8.8.8
+```
+
+	Correr tests
+```
+pytest
+```
 #
 Estructura inicial del proyecto
 ```
