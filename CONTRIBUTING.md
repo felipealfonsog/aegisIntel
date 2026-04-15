@@ -1,6 +1,6 @@
-# CONTRIBUTING.md
+#### CONTRIBUTING.md
 
-# Contributing to AegisIntel
+##### Contributing to AegisIntel
 
 Thank you for your interest in contributing to AegisIntel.
 
@@ -8,7 +8,7 @@ This document defines how contributions should be made to keep the project clean
 
 ---
 
-## Project philosophy
+##### Project philosophy
 
 AegisIntel is designed as a defensive threat intelligence platform.
 
@@ -21,13 +21,13 @@ Key principles:
 
 ---
 
-## Development workflow
+##### Development workflow
 
 All work is done on the `dev` branch.
 
 The `main` branch is reserved for stable versions only.
 
-### Workflow
+##### Workflow
 
 1. Pull latest changes from dev:
 
@@ -47,16 +47,16 @@ git push
 
 ---
 
-## Pull Requests
+##### Pull Requests
 
 All changes must go through Pull Requests.
 
-### Base rules
+##### Base rules
 
 - base branch: `main`
 - compare branch: `dev`
 
-### PR requirements
+##### PR requirements
 
 - clear title
 - clear description
@@ -73,38 +73,38 @@ Refactors validation logic to improve domain parsing and edge case handling.
 
 ---
 
-## Code guidelines
+##### Code guidelines
 
-### General
+##### General
 
 - keep code simple and readable
 - avoid unnecessary abstractions
 - prefer explicit logic over "magic"
 
-### Structure
+##### Structure
 
 - respect existing project structure
 - do not mix responsibilities across modules
 
-### Naming
+##### Naming
 
 - use clear, descriptive names
 - avoid abbreviations unless standard
 
 ---
 
-## Commit guidelines
+##### Commit guidelines
 
 Write meaningful commit messages.
 
-### Good examples
+##### Good examples
 
 - Add root API endpoint
 - Implement basic enrichment engine
 - Refactor validation utilities
 - Add unit tests for validators
 
-### Bad examples
+##### Bad examples
 
 - update
 - fix
@@ -112,7 +112,7 @@ Write meaningful commit messages.
 
 ---
 
-## Testing
+##### Testing
 
 Whenever possible:
 
@@ -125,7 +125,7 @@ pytest
 
 ---
 
-## What not to do
+##### What not to do
 
 - do not commit directly to main
 - do not introduce breaking changes without explanation
@@ -133,7 +133,7 @@ pytest
 
 ---
 
-## Issues and discussions
+##### Issues and discussions
 
 Use GitHub Issues to:
 
@@ -143,7 +143,7 @@ Use GitHub Issues to:
 
 ---
 
-## Scope of contributions
+##### Scope of contributions
 
 Relevant contributions include:
 
@@ -156,7 +156,7 @@ Relevant contributions include:
 
 ---
 
-## Final note
+##### Final note
 
 AegisIntel is intended to grow as a serious, structured security project.
 
