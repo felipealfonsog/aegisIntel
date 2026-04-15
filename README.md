@@ -1,6 +1,6 @@
-# AegisIntel
-AegisIntel - Defensive threat intelligence platform that aggregates, normalizes, and correlates indicators of compromise (IOCs) to produce actionable insights.
+🛡️ AegisIntel
 
+Defensive threat intelligence platform that aggregates, normalizes, and correlates indicators of compromise (IOCs) to produce actionable insights.
 #
 
 AegisIntel is a defensive cyber threat intelligence platform designed for the ingestion, enrichment, and correlation of indicators of compromise (IOCs) from multiple OSINT sources.
@@ -17,6 +17,16 @@ El sistema permite transformar datos dispersos en inteligencia estructurada, fac
 AegisIntel está pensado como un núcleo modular extensible, integrando pipelines de ingestión, motores de enriquecimiento, y capacidades de correlación, con el objetivo de simular y aproximarse a sistemas utilizados en operaciones reales de Threat Intelligence y Security Operations Centers (SOC).
 
 #
+```
+🎯 Core Capabilities
+	•	🔍 IOC ingestion from OSINT sources
+	•	🧬 IOC enrichment (IP, domain, hash intelligence)
+	•	🔗 Correlation and pattern detection
+	•	📊 Threat scoring and prioritization
+	•	🧠 Structured intelligence generation
+```
+#
+
 ```
 Core
 	•	Python 3.11+
@@ -42,20 +52,152 @@ Otros
 	•	Pydantic (validación de datos)
 ```
   #
+  🧱 Architecture
+  
 ```
-  aegisintel/
+aegisintel/
 │
-├── core/           # lógica central
-├── ingestion/      # recolección de datos OSINT
-├── enrichment/     # enriquecimiento de IOCs
-├── correlation/    # análisis y correlación
-├── api/            # FastAPI
-├── cli/            # herramienta CLI
-├── models/         # esquemas de datos (Pydantic)
-├── storage/        # DB / persistencia
+├── core/           # Core logic
+├── ingestion/      # OSINT data ingestion
+├── enrichment/     # IOC enrichment engine
+├── correlation/    # Correlation and analysis
+├── api/            # FastAPI service
+├── cli/            # CLI interface
+├── models/         # Data schemas (Pydantic)
+├── storage/        # Database layer
 ├── utils/
 ├── tests/
 └── README.md
 ```
 #
+Getting Started
+
+1. Clone the repository
+```
+git clone https://github.com/your-username/aegisintel.git
+cd aegisintel
+```
+
+2. Create virtual environment
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3. Install dependencies
+```
+pip install -r requirements.txt
+
+```
+
+🧪 Example Usage (CLI)
+```
+aegisintel ioc enrich 8.8.8.8
+```
+
+Output:
+```
+{
+  "ip": "8.8.8.8",
+  "country": "US",
+  "asn": "AS15169",
+  "reputation": "low",
+  "sources": ["geoip", "whois"]
+}
+```
+
+
+🔄 Development Workflow
+
+Branching model
+```
+main
+dev
+feature/*
+```
+
+
+Flow
+```
+
+	1.	Create a feature branch
+	2.	Develop and commit
+	3.	Open Pull Request → dev
+	4.	Merge into main when stable
+
+```
+
+
+🧭 Roadmap
+
+```
+Phase 1 — MVP
+	•	Basic IOC ingestion
+	•	Enrichment (GeoIP, WHOIS)
+	•	CLI interface
+
+Phase 2
+	•	Database integration
+	•	Data normalization
+	•	Threat scoring
+
+Phase 3
+	•	Correlation engine
+	•	Pattern detection
+	•	REST API
+
+Phase 4
+	•	Dashboard (optional)
+	•	Automated pipelines
+	•	Reporting
+
+⸻
+
+🧠 Design Principles
+	•	Modular architecture
+	•	Extensibility by design
+	•	Clear separation of concerns
+	•	Real-world applicability
+	•	Defensive-first approach
+
+```
+
+🤝 Contributing
+
+Contributions, ideas, and discussions are welcome.
+
+
+
+📄 License
+
+MIT License
+
+
+#
+
+
+⚠️ Disclaimer
+
+This project is intended for defensive security and research purposes only.
+Any misuse of this software is not the responsibility of the authors.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
