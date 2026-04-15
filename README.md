@@ -15,7 +15,54 @@ AegisIntel es una plataforma de ciberinteligencia orientada a la defensa, diseñ
 El sistema permite transformar datos dispersos en inteligencia estructurada, facilitando la identificación de patrones, priorización de amenazas y generación de insights accionables para entornos de seguridad.
 
 AegisIntel está pensado como un núcleo modular extensible, integrando pipelines de ingestión, motores de enriquecimiento, y capacidades de correlación, con el objetivo de simular y aproximarse a sistemas utilizados en operaciones reales de Threat Intelligence y Security Operations Centers (SOC).
-
+#
+Estructura inicial del proyecto
+```
+aegisintel/
+├── .gitignore
+├── LICENSE
+├── README.md
+├── requirements.txt
+├── aegisintel/
+│   ├── __init__.py
+│   ├── api/
+│   │   ├── __init__.py
+│   │   └── main.py
+│   ├── cli/
+│   │   ├── __init__.py
+│   │   └── main.py
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   │   └── exceptions.py
+│   ├── correlation/
+│   │   ├── __init__.py
+│   │   └── engine.py
+│   ├── enrichment/
+│   │   ├── __init__.py
+│   │   ├── engine.py
+│   │   └── providers/
+│   │       ├── __init__.py
+│   │       ├── base.py
+│   │       ├── mock_geoip.py
+│   │       └── mock_whois.py
+│   ├── ingestion/
+│   │   ├── __init__.py
+│   │   └── parsers.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   └── ioc.py
+│   ├── storage/
+│   │   ├── __init__.py
+│   │   └── memory.py
+│   └── utils/
+│       ├── __init__.py
+│       └── validators.py
+└── tests/
+    ├── test_engine.py
+    └── test_validators.py
+```
+	
 #
 ```
 🎯 Core Capabilities
