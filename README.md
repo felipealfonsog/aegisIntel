@@ -170,7 +170,7 @@ Contributions, ideas, and discussions are welcome.
 
 📄 License
 
-MIT License
+BSD-3-Clause license 
 
 
 #
