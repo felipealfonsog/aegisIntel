@@ -1,6 +1,6 @@
-# HOWTO.md
+HOWTO.md
 
-# AegisIntel — Git Workflow Guide
+AegisIntel — Git Workflow Guide
 
 This document explains how to work with Git in this project.
 
@@ -8,7 +8,7 @@ The workflow is intentionally simple but structured enough to avoid mistakes.
 
 ---
 
-## Branches used
+Branches used
 
 We use only two branches:
 
@@ -17,7 +17,7 @@ We use only two branches:
 
 ---
 
-## Core principles
+Core principles
 
 - Never work directly on main
 - All changes go through dev
@@ -26,7 +26,7 @@ We use only two branches:
 
 ---
 
-## First-time setup
+First-time setup
 
 Clone the repository:
 
@@ -40,16 +40,16 @@ git pull origin dev
 
 ---
 
-## Daily workflow
+Daily workflow
 
-### 1. Always update before working
+1. Always update before working
 
 git checkout dev
 git pull origin dev
 
 ---
 
-### 2. Make your changes
+2. Make your changes
 
 Edit files normally.
 
@@ -59,13 +59,13 @@ git status
 
 ---
 
-### 3. Add changes
+3. Add changes
 
 git add .
 
 ---
 
-### 4. Commit
+4. Commit
 
 git commit -m "Clear and specific message"
 
@@ -84,13 +84,13 @@ Bad examples:
 
 ---
 
-### 5. Push
+5. Push
 
 git push
 
 ---
 
-## Pull Request process (dev → main)
+Pull Request process (dev → main)
 
 When dev is stable:
 
@@ -109,7 +109,7 @@ compare = dev
 
 ---
 
-## After merging
+After merging
 
 Update your local repository:
 
@@ -121,7 +121,7 @@ git pull origin dev
 
 ---
 
-## Useful commands
+Useful commands
 
 Check current branch:
 
@@ -147,7 +147,7 @@ git fetch origin
 
 ---
 
-## Safe workflow summary
+Safe workflow summary
 
 1. work only on dev  
 2. always pull before starting  
@@ -157,7 +157,7 @@ git fetch origin
 
 ---
 
-## Important rules
+Important rules
 
 - main must always stay clean and stable
 - dev is the only working branch
@@ -166,7 +166,7 @@ git fetch origin
 
 ---
 
-## If something goes wrong
+If something goes wrong
 
 Run:
 
@@ -182,7 +182,7 @@ Do not run random commands without understanding the state.
 
 ---
 
-## Final note
+Final note
 
 This project follows a minimal and practical workflow:
 
