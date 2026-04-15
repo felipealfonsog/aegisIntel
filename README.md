@@ -17,7 +17,7 @@ El sistema permite transformar datos dispersos en inteligencia estructurada, fac
 AegisIntel está pensado como un núcleo modular extensible, integrando pipelines de ingestión, motores de enriquecimiento, y capacidades de correlación, con el objetivo de simular y aproximarse a sistemas utilizados en operaciones reales de Threat Intelligence y Security Operations Centers (SOC).
 
 #
-˜˜˜
+```
 Core
 	•	Python 3.11+
 	•	FastAPI (API moderna)
@@ -40,9 +40,9 @@ CLI
 Otros
 	•	Docker (opcional pero recomendado)
 	•	Pydantic (validación de datos)
-˜˜˜
+```
   #
-˜˜˜
+```
   aegisintel/
 │
 ├── core/           # lógica central
@@ -56,6 +56,6 @@ Otros
 ├── utils/
 ├── tests/
 └── README.md
-˜˜˜
+```
 #
 
