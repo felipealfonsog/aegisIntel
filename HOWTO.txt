@@ -1,6 +1,7 @@
-#### HOWTO.md
-
-##### AegisIntel — Simple Git Workflow Guide
+HOWTO
+------------
+AegisIntel — Simple Git Workflow Guide
+-----------------------------------------
 
 This document explains how to work with Git in this project.
 
@@ -8,7 +9,8 @@ This workflow is intentionally simple.
 
 ---
 
-##### Branches used
+Branches used
+--------------
 
 We only use:
 
@@ -17,7 +19,8 @@ We only use:
 
 ---
 
-##### General rules
+General rules
+--------------
 
 - Never work directly on main
 - All work is done in dev
@@ -25,7 +28,8 @@ We only use:
 
 ---
 
-##### First-time setup
+First-time setup
+-----------------
 
 Clone the repository:
 
@@ -39,9 +43,11 @@ git pull origin dev
 
 ---
 
-##### Daily workflow
+Daily workflow
+----------------
 
-##### 1. Update dev
+1. Update dev
+-------------
 
 Before starting:
 
@@ -50,7 +56,8 @@ git pull origin dev
 
 ---
 
-##### 2. Work on the project
+2. Work on the project
+------------------------
 
 Edit files normally.
 
@@ -60,13 +67,15 @@ git status
 
 ---
 
-##### 3. Add changes
+3. Add changes
+----------------
 
 git add .
 
 ---
 
-##### 4. Commit
+4. Commit
+------------
 
 git commit -m "Clear message describing changes"
 
@@ -85,13 +94,15 @@ Avoid:
 
 ---
 
-##### 5. Push changes
+5. Push changes
+-----------------
 
 git push
 
 ---
 
-##### Creating a Pull Request (dev → main)
+Creating a Pull Request (dev → main)
+--------------------------------------
 
 When dev is stable:
 
@@ -109,7 +120,8 @@ compare = dev
 
 ---
 
-##### After merge
+After merge
+------------
 
 Update local repo:
 
@@ -121,7 +133,9 @@ git pull origin dev
 
 ---
 
-##### Useful commands
+
+Useful commands
+----------------
 
 Check current branch:
 
@@ -141,7 +155,8 @@ git pull
 
 ---
 
-##### Safe workflow summary
+Safe workflow summary
+-----------------------
 
 1. work only on dev  
 2. pull before starting  
@@ -151,7 +166,8 @@ git pull
 
 ---
 
-##### Important notes
+Important notes
+----------------
 
 - main must always stay clean and stable
 - dev is where all development happens
@@ -160,7 +176,8 @@ git pull
 
 ---
 
-##### If something goes wrong
+If something goes wrong
+-------------------------
 
 Run:
 
@@ -170,7 +187,8 @@ Check current branch and changes before doing anything else.
 
 ---
 
-##### Final note
+Final note
+------------
 
 This project uses a minimal workflow:
 
