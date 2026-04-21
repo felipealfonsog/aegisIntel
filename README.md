@@ -316,6 +316,8 @@ Contributions, ideas, and discussions are welcome.
 
 📄 License
 
+Made with love ❤️ from Chil 🇨🇱
+
 BSD-3-Clause license 
 
 
