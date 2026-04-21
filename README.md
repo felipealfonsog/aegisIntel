@@ -17,6 +17,69 @@ El sistema permite transformar datos dispersos en inteligencia estructurada, fac
 AegisIntel está pensado como un núcleo modular extensible, integrando pipelines de ingestión, motores de enriquecimiento, y capacidades de correlación, con el objetivo de simular y aproximarse a sistemas utilizados en operaciones reales de Threat Intelligence y Security Operations Centers (SOC).
 
 #
+
+## Setup Helper Scripts
+
+AegisIntel provides helper scripts to simplify environment setup, dependency installation, and basic project execution.
+
+---
+
+# How to use
+
+#### Linux / Kali / Arch / BlackArch / macOS
+
+Download the script:
+```
+https://raw.githubusercontent.com/felipealfonsog/aegisintel/refs/heads/main/install-essentials.sh
+```
+Make it executable and run it:
+
+```bash
+chmod +x install-essentials.sh
+./install-essentials.sh
+
+#### Windows
+
+Download the script:
+```
+https://raw.githubusercontent.com/felipealfonsog/aegisintel/refs/heads/main/install-essentials.bat
+```
+Run it by double-clicking the file, or from CMD / PowerShell:
+
+install-essentials.bat
+
+or:
+```
+.\install-essentials.bat
+```
+What these scripts do
+
+install-essentials.sh
+
+Provides an interactive menu to:
+
+* install Python and required system dependencies
+* create a virtual environment (venv)
+* install project dependencies from requirements.txt
+* run a CLI demo
+* start the API server
+
+⸻
+
+install-essentials.bat
+
+## Provides equivalent functionality for Windows environments, compatible with CMD / PowerShell.
+
+⸻
+
+Notes
+
+* These scripts are intended to simplify onboarding and reduce setup friction.
+* Manual setup is still supported if preferred.
+* Designed for consistency across development environments.
+
+
+#
 RUN THE PROJECT
 
 Cómo ejecutar el proyecto
