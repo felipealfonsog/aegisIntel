@@ -1,4 +1,4 @@
-🛡️📡 AegisIntel
+🛡️📡 AegisIntel 𖤓
 
 Defensive threat intelligence platform that aggregates, normalizes, and correlates indicators of compromise (IOCs) to produce actionable insights.
 #
