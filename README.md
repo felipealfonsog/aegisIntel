@@ -37,7 +37,7 @@ Make it executable and run it:
 ```bash
 chmod +x install-essentials.sh
 ./install-essentials.sh
-
+```
 #### Windows
 
 Download the script:
@@ -45,9 +45,9 @@ Download the script:
 https://raw.githubusercontent.com/felipealfonsog/aegisintel/refs/heads/main/install-essentials.bat
 ```
 Run it by double-clicking the file, or from CMD / PowerShell:
-
+```
 install-essentials.bat
-
+```
 or:
 ```
 .\install-essentials.bat
