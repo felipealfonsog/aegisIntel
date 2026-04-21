@@ -3,12 +3,15 @@
 Defensive threat intelligence platform that aggregates, normalizes, and correlates indicators of compromise (IOCs) to produce actionable insights.
 #
 
+🇬🇧
+
 AegisIntel is a defensive cyber threat intelligence platform designed for the ingestion, enrichment, and correlation of indicators of compromise (IOCs) from multiple OSINT sources.
 
 The system transforms fragmented data into structured intelligence, enabling pattern identification, threat prioritization, and the generation of actionable insights for security environments.
 
 AegisIntel is built as a modular and extensible core, integrating ingestion pipelines, enrichment engines, and correlation capabilities, aiming to simulate real-world Threat Intelligence and Security Operations Center (SOC) systems.
 
+🇨🇱
 
 AegisIntel es una plataforma de ciberinteligencia orientada a la defensa, diseñada para la recolección, enriquecimiento y correlación de indicadores de compromiso (IOCs) provenientes de múltiples fuentes OSINT.
 
