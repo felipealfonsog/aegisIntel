@@ -18,13 +18,13 @@ AegisIntel está pensado como un núcleo modular extensible, integrando pipeline
 
 #
 
-## Setup Helper Scripts
+#### Setup Helper Scripts
 
 AegisIntel provides helper scripts to simplify environment setup, dependency installation, and basic project execution.
 
 ---
 
-# How to use
+#### How to use
 
 #### Linux / Kali / Arch / BlackArch / macOS
 
@@ -56,7 +56,7 @@ What these scripts do
 
 install-essentials.sh
 
-Provides an interactive menu to:
+#### Provides an interactive menu to:
 
 * install Python and required system dependencies
 * create a virtual environment (venv)
@@ -68,11 +68,11 @@ Provides an interactive menu to:
 
 install-essentials.bat
 
-## Provides equivalent functionality for Windows environments, compatible with CMD / PowerShell.
+#### Provides equivalent functionality for Windows environments, compatible with CMD / PowerShell.
 
 ⸻
 
-Notes
+#### Notes
 
 * These scripts are intended to simplify onboarding and reduce setup friction.
 * Manual setup is still supported if preferred.
@@ -80,6 +80,7 @@ Notes
 
 
 #
+
 RUN THE PROJECT
 
 Cómo ejecutar el proyecto
