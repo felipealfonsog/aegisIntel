@@ -316,7 +316,7 @@ Contributions, ideas, and discussions are welcome.
 
 📄 License
 
-Made with love ❤️ from Chil 🇨🇱
+Made with love ❤️ from Chile 🇨🇱
 
 BSD-3-Clause license 
 
